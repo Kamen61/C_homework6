@@ -25,10 +25,8 @@
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 void IntersectionPoint(double b1,double k1, double b2, double k2){
-    double x=0;
-    double y=0;
-    x = (b1-b2)/(k2-k1);
-    y = (k2*b1-k1*b2)/(k2-k1);
+    double x = (b1-b2)/(k2-k1);
+    double y = (k2*b1-k1*b2)/(k2-k1);
 
     System.Console.WriteLine($"Точка пересения двух прямых -> ({x},{y})");
 }
