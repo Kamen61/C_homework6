@@ -24,19 +24,25 @@
 // значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-void IntersectionPoint(double b1,double k1, double b2, double k2){
-    double x = (b1-b2)/(k2-k1);
-    double y = (k2*b1-k1*b2)/(k2-k1);
+void IntersectionPoint(double b1, double k1, double b2, double k2)
+{
+    if (k1 - k2 != 0)
+    {
+        double x = (b1 - b2) / (k2 - k1);
+        double y = (k2 * b1 - k1 * b2) / (k2 - k1);
 
-    System.Console.WriteLine($"Точка пересения двух прямых -> ({x},{y})");
+        System.Console.WriteLine($"Точка пересения двух прямых -> ({x},{y})");
+    }
+    else
+        System.Console.WriteLine($"У двух прямых не определена точка пересения");
 }
 System.Console.Write("Введите значение b1 : ");
-double enteredUserB1=Convert.ToDouble(Console.ReadLine());
+double enteredUserB1 = Convert.ToDouble(Console.ReadLine());
 System.Console.Write("Введите значение k1 : ");
-double enteredUserK1=Convert.ToDouble(Console.ReadLine());
+double enteredUserK1 = Convert.ToDouble(Console.ReadLine());
 System.Console.Write("Введите значение b2 : ");
-double enteredUserB2=Convert.ToDouble(Console.ReadLine());
+double enteredUserB2 = Convert.ToDouble(Console.ReadLine());
 System.Console.Write("Введите значение k2 : ");
-double enteredUserK2=Convert.ToDouble(Console.ReadLine());
+double enteredUserK2 = Convert.ToDouble(Console.ReadLine());
 
-IntersectionPoint(enteredUserB1,enteredUserK1,enteredUserB2,enteredUserK2);
+IntersectionPoint(enteredUserB1, enteredUserK1, enteredUserB2, enteredUserK2);
